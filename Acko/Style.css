@@ -1,33 +1,34 @@
 .Kopfzeile {
-    background-color: #27474d ;
+    background-color: #10293a;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
     padding: 20px;
     margin: -10px -10px 0px -10px;
     font-size: large;
+    color: white;
 }
 
-
-
-a { 
-    color: whitesmoke;
+a{
+    text-decoration: none;
 }
+
 
 .Infozeile {
     text-align: center;
-    background-color: #27474d;
+    background-color: #1ebf9c;
     padding: 20px;
     margin: -10px -10px 0px -10px;
+    color: black;
 }
 
 body { 
-    background-color: #243246;
+    background-color: #c6d0d7;
     
 }
 
 .Rechte {
     text-align: center;
-    color: whitesmoke;
+    color: black;
     padding: 20px;
 }
 
