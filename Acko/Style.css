@@ -1,4 +1,5 @@
 .Kopfzeile {
+    background-color: #27474d ;
     background-color: #10293a;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
@@ -8,6 +9,10 @@
     color: white;
 }
 
+
+
+a { 
+    color: whitesmoke; }
 a{
     text-decoration: none;
 }
@@ -15,26 +20,40 @@ a{
 
 .Infozeile {
     text-align: center;
+    background-color: #27474d;
     background-color: #1ebf9c;
     padding: 20px;
     margin: -10px -10px 0px -10px;
-    color: black;
+    color: white;
 }
 
 body { 
+    background-color: #243246;
     background-color: #c6d0d7;
-    
+
 }
 
 .Rechte {
     text-align: center;
+    color: whitesmoke;
     color: black;
     padding: 20px;
 }
 
-.Impressum {
-    color: whitesmoke;
+ body {
     padding: 10px;
-    
-    
+
+
+}
+
+.Impressum {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.carousel {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
 }
