@@ -4,10 +4,10 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
     padding: 20px;
-    margin: -10px -10px 0px -10px;
+    margin: -10px -10px 0px -10px;;
     font-size: large;
     color: white;
-    border-radius: 10px;
+    
 }
 
 
@@ -26,14 +26,17 @@ a{
     padding: 20px;
     margin: -10px -10px 0px -10px;
     color: white;
-    border-radius: 0px 0px 10px 10px
+    
 }
 
 body { 
     background-color: #243246;
     background-color: #c6d0d7;
-
+    padding: 10px;
+    font-family: Arial, sans-serif;
+    margin: 20px;
 }
+
 
 .Rechte {
     text-align: center;
@@ -42,11 +45,7 @@ body {
     padding: 20px;
 }
 
- body {
-    padding: 10px;
 
-
-}
 
 .Impressum {
     display: flex;
@@ -56,19 +55,64 @@ body {
 
 .carousel {
     display: flex;
-    justify-content: right;
+    justify-content: center;
     padding: 10px;
 }
 
-#recent {
-    
-    margin-left: 257px;
+.rate {
+    float: left;
+    height: 46px;
+    padding: 0 10px;
+}
+.rate:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+}
+.rate:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px;
+    color:#ccc;
+}
+.rate:not(:checked) > label:before {
+    content: '★ ';
+}
+.rate > input:checked ~ label {
+    color: #ffc700;    
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: #deb217;  
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: #c59b08;
 }
 
-#gal {
-    text-align: center;
+label {
+    display: block;
+    margin-bottom: 8px;
 }
-
-.Galtable {
-    padding: 10px;
+input, textarea {
+    width: 45%;
+    padding: 8px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #45a049;
 }
