@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepage</title>
+    <link rel="stylesheet" href="style (2).css">
     <style>
         .carousel-container {
             width: 80%;
@@ -54,81 +55,89 @@
             right: 10px;
         }
     </style>
-    <link rel="stylesheet" href="style.css">
+    
+    
 </head>
 
 <body>
 
     <a href="homepage.html">
         <p class="Kopfzeile">
-            Acko Productions 
+            Acko Productions
         </p>
     </a>
+
+    <p class="Infozeile">
+        <a href="https://www.youtube.com/@ackoproductions9684"> Youtube </a> &emsp; &emsp;
+        <a href="formular.html"> Formular </a> &emsp; &emsp;
+        <a href="About.html"> About </a> &emsp; &emsp;
+        <a href="https://livecounts.io/youtube-live-subscriber-counter/UCyZK8YpryI5MN2S7S2oY9sw"> Subscribtions </a>
+        &emsp; &emsp;
+        <a href="Kontakt.html"> Kontakt </a>
+    </p>
 
     <p class="Infozeile">
         <b>WELCOME TO OUR CHANNEL </b>
     </p>
 
-    <p class="Infozeile"> 
-        <a href="https://www.youtube.com/@ackoproductions9684"> Youtube </a> &emsp; &emsp; 
-        <a href="Gallerie.html"> Gallerie </a> &emsp; &emsp; 
-        <a href="About.html"> About </a> &emsp; &emsp; 
-        <a href="https://livecounts.io/youtube-live-subscriber-counter/UCyZK8YpryI5MN2S7S2oY9sw"> Subscribtions </a> &emsp; &emsp;
-        <a href="Kontakt.html"> Kontakt </a>
-    </p>
+    <h2 style="text-align: center;">Recent Videos</h2>
 
-   
-    
     <div class="carousel">
-        <table>
-            <tr>
-                <td>
-             
-                </td>
-                <td>
-                    <h3 id="recent">Recent Videos</h3>
-    <div class="carousel-container">
-        <div class="carousel-inner">
-            <div class="carousel-item">
-                <img src="ackoGallerie\InstaErklärt.webp" alt="Image 1">
-            </div>
-            <div class="carousel-item">
-                <img src="ackoGallerie\tiagosuche.webp" alt="Image 2">
-            </div>
-            <div class="carousel-item">
-                <img src="ackoGallerie\parabelErklärt.webp" alt="Image 2">
-            </div>
-            <div class="carousel-item">
-                <img src="ackoGallerie\horrorhaus.webp" alt="Image 2">
+
+        <div class="carousel-container">
+            <div class="carousel-inner">
+                <div class="carousel-item">
+                    <a href="https://youtu.be/VPhUCCtnqTE?si=WYnfunl9wukCY57F"><img src="ackoGallerie\InstaErklärt.webp"
+                            alt="Image 1"></a>
+                </div>
+                <div class="carousel-item">
+                    <a href="https://youtu.be/Ob-XkhPgHzg?si=_MojPwmd-6xggOTq"><img src="ackoGallerie\tiagosuche.webp"
+                            alt="Image 2"></a>
+                </div>
+                <div class="carousel-item">
+                    <a href="https://youtu.be/qrE-h6DXXWU?si=wm_GTuLxx2XrC5fZ"><img
+                            src="ackoGallerie\parabelErklärt.webp" alt="Image 2"></a>
+                </div>
+                <div class="carousel-item">
+                    <a href="https://youtu.be/tPhNo0h7bX4?si=hyioX2ez4NwKiUQ_"><img src="ackoGallerie\horrorhaus.webp"
+                            alt="Image 2"></a>
+                </div>
+
             </div>
 
+            <button class="carousel-btn prev" onclick="changeSlide(-1)">❮</button>
+            <button class="carousel-btn next" onclick="changeSlide(1)">❯</button>
         </div>
+        <script>
+            let currentIndex = 0;
+            const totalItems = document.querySelectorAll('.carousel-item').length;
+    
+            function changeSlide(direction) {
+                currentIndex = (currentIndex + direction + totalItems) % totalItems;
+                showSlide(currentIndex);
+            }
+    
+            function showSlide(index) {
+                const carouselInner = document.querySelector('.carousel-inner');
+                const items = document.querySelectorAll('.carousel-item');
+    
+                const translateValue = -index * 100 + '%';
+                carouselInner.style.transform = 'translateX(' + translateValue + ')';
+            }
+        </script>
 
-        <button class="carousel-btn prev" onclick="changeSlide(-1)">❮</button>
-        <button class="carousel-btn next" onclick="changeSlide(1)">❯</button>
+
     </div>
-
-    <script>
-        let currentIndex = 0;
-        const totalItems = document.querySelectorAll('.carousel-item').length;
-
-        function changeSlide(direction) {
-            currentIndex = (currentIndex + direction + totalItems) % totalItems;
-            showSlide(currentIndex);
-        }
-
-        function showSlide(index) {
-            const carouselInner = document.querySelector('.carousel-inner');
-            const items = document.querySelectorAll('.carousel-item');
-
-            const translateValue = -index * 100 + '%';
-            carouselInner.style.transform = 'translateX(' + translateValue + ')';
-        }
-    </script>
-    </td>
-    </tr>
-    </table>
+    <div>
+        <center>
+            <p>Video Teaser</p>
+            <video width="50%" controls class="video">
+                <source src="ackoGallerie\skateboard.MP4" type="video/mp4">
+                <source src="mov_bbb.ogg" type="video/ogg">
+                Your browser does not support HTML video.
+            </video>
     </div>
+    </center>
 </body>
 
 </html>
