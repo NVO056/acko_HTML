@@ -35,19 +35,20 @@
         #priceData {
             font-family: Copperplate;
             font-size: 30px;
-            position: absolute;
-            left: 45%;
+            display: flex;
+            justify-content: center;
         }
-        #price999{
-            position: absolute;
-            bottom: 200%;
-            right: 1900%;
+        
+        .p999 {
+            display: block;
+            justify-content: left;
             
         }
-        #price1999{
-            position: absolute;
-            bottom: 200%;
-            left: 1000%;
+
+        .p1999 {
+            display: block;
+            justify-content: right;
+            margin-left: 777px;
         }
     </style>
 </head>
@@ -86,14 +87,14 @@
     <table id="priceData">
         <th>
         <tr>
-            <td id="price999">999$</td>
-            <td id="price1999">1999$</td>
+        <td>
+            <div class="p999">999$</div>
+        </td>
+        <td>
+            <div class="p1999">1999$</div>
+        </td>
         </tr>
-        <tr>
-            <td></td>
-        <td></td>
-    </tr>
-</th>
+        </th>
     </table>
 
 </body>
